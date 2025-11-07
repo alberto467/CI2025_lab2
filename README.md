@@ -36,3 +36,21 @@ After much debugging I reached a working state, but unfortunately the performanc
 It has to be noted that the EAX operator does see to be more powerful when comparing by iterations, but in testing, simply running the fast crossover for many more iterations was improving faster. I also cannot exclude the presence of bugs in my implantation of EAX, it should also be said that there exists many versions and variants of EAX and there may very well be an implementation of it that would help overall performance.
 
 In the end i kept with using my simple crossover operator, combined with the random mutation operator, which together seem to provide a good balance of exploration and exploitation. To ensure that this balance is kept, I implemented different probabilistic selection mechanisms, such as exponential and sigmoid based selections, which help to maintain diversity in the population while still favoring better solutions. I also used a temperature parameter with a schedule to control the "elitism" of the selection mechanisms, although the benefits seem to be negligible.
+
+## Results
+
+- problem_g_100 - found 4000.84
+- problem_r1_100 - found 715.72
+- problem_r2_100 - found -4787.97
+
+--
+
+- problem_g_500 - found 9420.07
+- problem_r1_500 - found 2457.90
+- problem_r2_500 - found -22376.36
+
+--
+
+- problem_g_1000 - found 17221.00
+- problem_r1_1000 - found 11678.28
+- problem_r2_1000 - found -46227.20
